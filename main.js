@@ -1,6 +1,6 @@
 const produtos = [
     {
-      produto: "Notebook",
+      produto: "Noteboook",
       categoria: "Eletrônicos",
       quantidade: 10,
       preco: 3500.00
