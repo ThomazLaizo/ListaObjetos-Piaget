@@ -1,51 +1,58 @@
-const produtos = [
+const filmes = [
     {
-      produto: "Noteboook",
-      categoria: "Eletrônicos",
-      quantidade: 10,
-      preco: 3500.00
+        nome: "O Poderoso Chefão",
+        categoria: "Drama / Crime",
+        data_de_lancamento: "1972-03-24",
+        diretor: "Francis Ford Coppola"
     },
     {
-      produto: "Smartphone",
-      categoria: "Eletrônicos",
-      quantidade: 15,
-      preco: 2200.00
+        nome: "A Origem",
+        categoria: "Ficção Científica / Ação",
+        data_de_lancamento: "2010-07-16",
+        diretor: "Christopher Nolan"
     },
     {
-      produto: "Cadeira",
-      categoria: "Móveis",
-      quantidade: 8,
-      preco: 450.00
+        nome: "Pulp Fiction: Tempo de Violência",
+        categoria: "Crime / Drama",
+        data_de_lancamento: "1994-10-14",
+        diretor: "Quentin Tarantino"
     },
     {
-      produto: "Teclado",
-      categoria: "Periféricos",
-      quantidade: 20,
-      preco: 120.00
+        nome: "Interestelar",
+        categoria: "Ficção Científica / Drama",
+        data_de_lancamento: "2014-11-06",
+        diretor: "Christopher Nolan"
     },
     {
-      produto: "Monitor",
-      categoria: "Eletrônicos",
-      quantidade: 12,
-      preco: 950.00
+        nome: "Forrest Gump: O Contador de Histórias",
+        categoria: "Drama / Romance",
+        data_de_lancamento: "1994-07-06",
+        diretor: "Robert Zemeckis"
+    },
+    {
+        nome: "Matrix",
+        categoria: "Ficção Científica / Ação",
+        data_de_lancamento: "1999-05-21",
+        diretor: "Lana Wachowski, Lilly Wachowski"
+    },
+    {
+        nome: "O Senhor dos Anéis: A Sociedade do Anel",
+        categoria: "Fantasia / Aventura",
+        data_de_lancamento: "2001-12-19",
+        diretor: "Peter Jackson"
     }
-  ];
+];
 
 const corpoDaTabela = document.getElementById("corpoDaTabela");
 
-for (let produto of produtos){
+for (let filme of filmes){
     const linha = document.createElement("tr")
 
     linha.innerHTML = `
-    <td>${produto.produto}</td>
-    <td>${produto.categoria}</td>
-    <td>${produto.quantidade}</td>
-    <td class="preco">${produto.preco.toLocaleString(
-        "pt-BR",{
-            style: "currency",
-            currency: "BRL"
-        }
-    )}</td>
+    <td class = "dado">${filme.nome}</td>
+    <td class = "dado">${filme.categoria}</td>
+    <td class = "dado">${filme.data_de_lancamento}</td>
+    <td class = "dado">${filme.diretor}</td>
     `
     corpoDaTabela.appendChild(linha)
 }
